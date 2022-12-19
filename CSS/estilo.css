@@ -1,0 +1,222 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    color: #FFC300;
+    /* font-family: 'fonte techno'; */
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    /* Para reduzier a quantidade de linhas, podemos mandar todos esses
+    comandos em uma só */
+    /* background-image: url(../arquivos/BackGroud.jpg);
+    background-repeat: no-repeat;
+    background-position: center center fixed; */
+    height: 100vh;
+    background: no-repeat center center fixed;
+    background-size: cover;
+    /* background-image: linear-gradient(to right bottom, #032a04, #04360b, #07420f, #0d4e13, #135b17, #166c1a, #197d1c, #1c8f1e, #1aaa1e, #16c61c, #0ee217, #00ff0b); */
+    background-image:url(../arquivos/BackGround-Tech-Black.jpg)
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    /* border-bottom: 2px solid white; borda simples "bottom" é biaxo, fundo, rodapé*/
+    /* box-shadow: 1px 1px 10px 1px black;  sequência > cor; offset horizontal; offset vertical; blur */
+    /* border-bottom: 15px ridge white; borda tipo 3d feia */
+    box-shadow: 1px 1px 10px 1px #ffff;
+}
+
+header ul{
+    display: flex;    
+}
+
+header ul li{
+    padding: 5px;   
+}
+
+header ul li a:hover{
+    color:white;
+    text-decoration: underline;
+}
+
+header ul li a{
+    font-family: 'fonte zrnic';
+    transition: 500ms;
+}
+
+header ul{
+    border-bottom: 2px dashed #fff;
+}
+
+.container {
+    text-align: center;
+}
+
+.container .name h1 {
+    font-family: 'fonte techno';
+    font-size: 60px;
+}
+
+.container .name h5 {
+    font-family: 'fonte zrnic';
+    font-size: 25px;
+}
+
+#arrow{
+    font-size: 30px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+}
+@keyframes blink{
+    to{
+        visibility: hidden;
+    }
+}
+#animation{
+    transition: 300ms;
+}
+
+.rotate{
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+.form div p{
+    font-family: 'fonte zrnic';
+}
+#about p {  
+    font-family: 'fonte zrnic';
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 60;
+}
+
+.active{
+    display: block !important;
+}
+
+.form {
+    width: 40%;  
+    margin: 0 auto; 
+    margin-top: 20px; 
+}
+
+.form input {
+    width: 50%;   
+    padding: 5px 10px; 
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.form button {
+    /* animação com hover */
+    width: 15%; 
+    padding: 5px 10px;
+    background: linear-gradient(to right, #c09717 50%, #9c551b 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color: #fff;
+    font-weight: 100;
+    border: none; 
+    cursor: pointer;  
+    transition: all 400ms ease-out;
+    border-radius: 0px 10px 10px 0px;
+    margin-left: -8px;
+}
+
+.form button:hover{
+    background-position: left bottom;    
+}
+.form form{
+    margin: 10px;
+    padding: 5px;
+    /* border: thick double #fff; */
+}
+
+.flex {
+    display: flex;
+    justify-content: center;        
+}
+
+.flex div {    
+    border: 5px solid #fff;    
+    margin: 15px;   
+    flex-basis: 100%;
+    background-color: #fff;
+    max-width: 260px;
+    cursor: pointer;
+}
+
+.flex div:hover{
+    box-shadow: 1px 1px 10px 1px #fff;
+}
+
+.flex div{
+    transition: 400ms;
+}
+.grid{
+    display: grid;
+    /* ROW = FILEIRA */
+    /* grid-template-rows: 25px 50px 100px 200px; dividido por pixels */
+    /* grid-template-rows: repeat(4, 50px); dividido por repetição */
+    /* grid-template-rows: auto; dividido automaticamente  */
+    /* grid-auto-rows: 1fr 2fr 6fr 1fr; dividido por frações */        
+    grid-template-rows: repeat(3, 60px);
+    /* grid-template-columns: 90px 50px 30px 20px; também podemos usar as mesma opções nas colulas: px; repeat; auto e fr  */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    /* row-gap: 20px; podemos definir os tamanho do espaçamento das fileiras */
+    /* column-gap: 20px; podemos definir os tamanho do espaçamento das colunas */
+    margin: 10px;
+    border: 5px solid white;
+
+}
+/* definir a posição por coordenadas */
+.deslocamento{
+    grid-column: 3;
+    grid-row: 2;
+}
+/* definir i inicio e fim */
+.purple{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.grid div{
+    padding: 30px;
+}
+
+/* Responsividade através de Media Quary */
+
+@media only screen and (max-width: 768px){
+    .form{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .container .name h1{
+        font-size: 60px;
+    }
+    .container .name h5{
+        font-size: 20px;
+    }
+
+    #about p{
+        max-width: 80%;
+        font-size: 18px;
+        text-align: justify;
+    }
+}

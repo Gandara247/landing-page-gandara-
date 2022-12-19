@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4fd00c338d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">         -->
+    <title>Gandara</title>
+
+    <style>
+        @font-face{
+            font-family: fonte techno;
+            src: url(./Fontes/auto-techno/auto-techno.ttf);
+        }
+
+        @font-face{
+            font-family: fonte zrnic;
+            src: url(./Fontes/Zrnic/zrnic\ rg.ttf);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="arquivos/logo gandara tech.png" alt="Logo Gandara">
+
+        </div>
+        <ul>
+            <li>
+                <a target="_blank" href="https://github.com/">github</a>
+            </li>
+            <li>
+                <a target="_blank" href="mailto:gustavogandarasilva@gmail.com">email</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://wa.me/+5562985403905">whatsapp</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <section class="container">box
+            <div class="name">
+                <h1>Gandara</h1>
+                <h5>Desenvolverdor Web FullStack</h5>
+            </div>
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fa-solid fa-sort-down"></i>
+            </div>
+            <div style="display: none;" id="about">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam architecto sunt quidem sequi
+                    explicabo numquam quasi culpa optio enim et dolorum, voluptatibus dolorem quisquam. A fugiat nisi
+                    dolorem accusamus. Obcaecati?
+                </p>
+            </div>
+            <div class="form">
+                <div>
+                    <p>Deixe seu contato</p>
+                </div>
+                <form action="">
+                    <input type="text" placeholder="seu melhor e-mail :)">
+                    <button>enviar!</button>
+                </form>
+
+            </div>
+            <div class="flex">
+                <div>
+                    <img src="arquivos/box1.png" alt="box1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ipsam itaque qui
+                        doloribus distinctio officiis. Voluptatum esse sint iure dicta placeat, distinctio veniam
+                        tenetur autem id qui illum nulla suscipit?</p>
+                </div>
+                <div>
+                    <img src="arquivos/box2.png" alt="box2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ipsam itaque qui
+                        doloribus distinctio officiis. Voluptatum esse sint iure dicta placeat, distinctio veniam
+                        tenetur autem id qui illum nulla suscipit?</p>
+                </div>
+                <div>
+                    <img src="arquivos/box3.png" alt="box3">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ipsam itaque qui
+                        doloribus distinctio officiis. Voluptatum esse sint iure dicta placeat, distinctio veniam
+                        tenetur autem id qui illum nulla suscipit?</p>
+                </div>
+                <div>
+                    <img src="arquivos/box4.png" alt="box4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit ipsam itaque qui
+                        doloribus distinctio officiis. Voluptatum esse sint iure dicta placeat, distinctio veniam
+                        tenetur autem id qui illum nulla suscipit?</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <script>
+        function displayAbout(){
+            var arrow = document.getElementById('animation');
+            arrow.classList.toggle('rotate');
+            var display = document.getElementById('about');
+            display.classList.toggle('active');
+        }
+    </script>
+
+    <div class="grid">
+        <div style="background-color: aqua;"></div>
+        <div style="background-color: white;"></div>
+        <div style="background-color: black;"></div>
+        <div class="deslocamento" style="background-color: blue;"></div> <!--classe para alterar a posição-->
+        <div style="background-color: orange;"></div>
+        <div style="background-color: red;"></div>
+        <div class="purple" style="background-color: purple;"></div>   <!--classe para determinar inicio e fim-->     
+    </div>
+
+</body>
+
+</html>

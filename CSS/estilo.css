@@ -79,6 +79,11 @@ header ul{
     cursor: pointer;
     animation: blink 1s steps(5, start) infinite;
 }
+
+#flex, img{
+    max-width: 250px;
+    max-height: 250px;
+}
 @keyframes blink{
     to{
         visibility: hidden;
@@ -166,29 +171,30 @@ header ul{
 .flex div{
     transition: 400ms;
 }
-.grid{
+/* .grid{
     display: grid;
-    /* ROW = FILEIRA */
-    /* grid-template-rows: 25px 50px 100px 200px; dividido por pixels */
-    /* grid-template-rows: repeat(4, 50px); dividido por repetição */
-    /* grid-template-rows: auto; dividido automaticamente  */
-    /* grid-auto-rows: 1fr 2fr 6fr 1fr; dividido por frações */        
+    ROW = FILEIRA
+    grid-template-rows: 25px 50px 100px 200px; dividido por pixels
+    grid-template-rows: repeat(4, 50px); dividido por repetição
+    grid-template-rows: auto; dividido automaticamente 
+    grid-auto-rows: 1fr 2fr 6fr 1fr; dividido por frações        
     grid-template-rows: repeat(3, 60px);
-    /* grid-template-columns: 90px 50px 30px 20px; também podemos usar as mesma opções nas colulas: px; repeat; auto e fr  */
+    grid-template-columns: 90px 50px 30px 20px; também podemos usar as mesma opções nas colulas: px; repeat; auto e fr 
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    /* row-gap: 20px; podemos definir os tamanho do espaçamento das fileiras */
-    /* column-gap: 20px; podemos definir os tamanho do espaçamento das colunas */
+    row-gap: 20px; podemos definir os tamanho do espaçamento das fileiras
+    column-gap: 20px; podemos definir os tamanho do espaçamento das colunas
     margin: 10px;
     border: 5px solid white;
 
-}
+} */
+
 /* definir a posição por coordenadas */
-.deslocamento{
+/* .deslocamento{
     grid-column: 3;
     grid-row: 2;
 }
-/* definir i inicio e fim */
+definir i inicio e fim
 .purple{
     grid-column-start: 1;
     grid-column-end: 4;
@@ -196,7 +202,7 @@ header ul{
 
 .grid div{
     padding: 30px;
-}
+} */
 
 /* Responsividade através de Media Quary */
 
@@ -219,4 +225,28 @@ header ul{
         font-size: 18px;
         text-align: justify;
     }
+}
+
+#Skills p {
+    color: #000;
+    text-align: justify;
+    font-family: 'fonte zrnic';
+    margin: 8px;
+    font-size: 18px;
+}
+
+#soft-skills{
+    font-family: 'fonte zrnic';
+    font-size: 32px;
+    margin-top: 48px;
+        
+}
+
+#Skills img{
+    max-width: 250px;
+}
+
+#creativity p{
+    font-size: 40px;
+    text-align: center;  
 }

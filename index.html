@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="CSS/estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <title>Gandara</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+        <link rel="shortcut icon" href="./arquivos/favicon-gandara.png" type="image/x-icon">
+    <title>Gandara - Web Developer</title>
 
     <style>
         @font-face {
@@ -31,6 +33,17 @@
             <img id="logo" src="arquivos/gda-web-developer.png" alt="Logo Gandara">
 
         </div>
+
+        <div class="form">
+            <!-- <div>
+                <p>Deixe seu contato</p>
+            </div> -->
+            <form action="">
+                <input type="text" placeholder="Deixe seu melhor e-mail :)">
+                <button>enviar!</button>
+            </form>
+        </div>
+        
         <ul>
             <li>
                 <a target="_blank" href="https://github.com/">github</a>
@@ -47,7 +60,7 @@
         <section class="container">
             <div class="name">
                 <h1>Gandara</h1>
-                <h5>Desenvolverdor Web FullStack</h5>
+                <h5>Web Developer FullStack</h5>
             </div>
             <div onclick="displayAbout()" id="arrow">
                 <i id="animation" class="fa-solid fa-sort-down"></i>
@@ -68,86 +81,74 @@
                     (Emicida, Madume, 2015).
                 </p>
             </div>
-            <div class="form">
-                <div>
-                    <p>Deixe seu contato</p>
-                </div>
-                <form action="">
-                    <input type="text" placeholder="seu melhor e-mail :)">
-                    <button>enviar!</button>
-                </form>
-
-            </div>
+        
             <div id="soft-skills">
                 <p>Soft Skills</p>
             </div>
-            <div class="card">
-                <div class="circle"></div>
-                <div class="content">
-                    <h2>Creativity</h2>
-                    <p>A velha e boa criatividade. Essa realmente é uma das minhas melhores skills. Não sei se é normal,
-                        mas quando me deparo com algo a ser resolvido, minha cabeça já começa a criar várias
-                        possibilidades de resolução de forma facilitada e instigante de modo a gerar interesse pelo o
-                        que estou fazendo.
-                        <br><br>
-                        Criar coisas novas, mesmo que seja uma nova perspectiva, é o que me move. Então vamos codar que
-                        minha mente já está cheia de programas pra serem criados.
-                    </p>
+            <div id="flex-box" class="flex-box">
+                <div id="Skills" class="card">
+                    <div>
+                        <div>
+                            <h2 id="creativity">Creativity</h2>
+                        </div>
+                        <div class="circle"></div>
+                        <div class="content">
+                            <p>A velha e boa criatividade. Essa realmente é uma das minhas melhores skills. Não sei se é normal,
+                                mas quando me deparo com algo a ser resolvido, minha cabeça já começa a criar várias
+                                possibilidades de resolução de forma facilitada e instigante de modo a gerar interesse pelo o
+                                que estou fazendo.
+                                <br>
+                                Criar coisas novas, mesmo que seja uma nova perspectiva, é o que me move. Então vamos codar que
+                                minha mente já está cheia de programas pra serem criados.
+                            </p>
+                        </div>
+                        <img src="arquivos/Creativity.png" alt="">
+                    </div>             
+                    
+    
                 </div>
-                <img src="arquivos/Creativity.png" alt="">
-                
-                <div class="teste">
-                    <h2>Creativity</h2>
+                <div id="skills-dois" class="card-dois">
+                    <div>
+                        <div>
+                            <h2 id="collaboration">Collaboration</h2>
+                        </div> 
+                        <div class="circle-dois"></div>
+                        <div class="content-dois">
+                            <p>O ser humano é um ser social e eu não me incluo fora dessa. Gosto muito do trabalho em equipe,
+                                das interações e relações interpessoais que são geradas através da colaboração.
+                                <br>
+                                O conhecimento é tão vasto e a interpretação é livre, ou seja, duas pessoas podem chegar ao
+                                mesmo resultado por meios distintos e trabalhando juntas o objetivo será alcançado de forma mais
+                                rápida. É nisso que eu acredito até porque "sonho que se sonha só é só um sonho que se sonha só,
+                                mas sonho que se sonha junto é realidade" (Raul Seixas, Prelúdio, 1974).
+                            </p>
+                        </div>
+                        <img src="arquivos/Collaboration.png" alt="">
+                    </div>                                
                 </div>
-            </div>
+                <div id="skills-tres" class="card-tres">
+                    <div>
+                        <div>
+                            <h2 id="empathy">Empathy</h2>
+                        </div> 
+                        <div class="circle-tres"></div>
+                        <div class="content-tres">
+                            <p>Entendo que ser desenvolver é dar soluções práticas para facilitar a vida de todos. Vejo que
+                                seria completamente inviável o sucesso nessa área sem a capacidade de ter empatia pelo outro,
+                                tanto com o grupo de trabalho como com o usuário.
+                                <br>
+                                Afinal, para quem e para que você desenvolve se não para o outro e pelo outro. Entender o
+                                próximo é algo que pratico com muita frequência, pois, atualmente trabalho com atendimento ao
+                                público e percebo que me enriqueço muito ao me colocar no lugar de cada um com quem converso
+                                para chegarmos a uma solução viável.
+                            </p>
+                        </div>
+                        <img src="arquivos/Empathy.png" alt="">
+                    </div>                                
+                </div>
 
-
-
-            <div id="Skills" class="flex">
-                <div>
-                    <img src="arquivos/Creativity.png" alt="box1">
-                    <div id="creativity">
-                        <p>Creativity</p>
-                    </div>
-                    <p>A velha e boa criatividade. Essa realmente é uma das minhas melhores skills. Não sei se é normal,
-                        mas quando me deparo com algo a ser resolvido, minha cabeça já começa a criar várias
-                        possibilidades de resolução de forma facilitada e instigante de modo a gerar interesse pelo o
-                        que estou fazendo.
-                        <br><br>
-                        Criar coisas novas, mesmo que seja uma nova perspectiva, é o que me move. Então vamos codar que
-                        minha mente já está cheia de programas pra serem criados.
-                    </p>
-                </div>
-                <div>
-                    <img src="arquivos/Collaboration.png" alt="box2">
-                    <div id="creativity">
-                        <p>Collaboration</p>
-                    </div>
-                    <p>O ser humano é um ser social e eu não me incluo fora dessa. Gosto muito do trabalho em equipe,
-                        das interações e relações interpessoais que são geradas através da colaboração.
-                        <br><br>
-                        O conhecimento é tão vasto e a interpretação é livre, ou seja, duas pessoas podem chegar ao
-                        mesmo resultado por meios distintos e trabalhando juntas o objetivo será alcançado de forma mais
-                        rápida. É nisso que eu acredito até porque "sonho que se sonha só é só um sonho que se sonha só,
-                        mas sonho que se sonha junto é realidade" (Raul Seixas, Prelúdio, 1974).
-                    </p>
-                </div>
-                <div>
-                    <img src="arquivos/Empathy.png" alt="box3">
-                    <div id="creativity">
-                        <p>Empathy</p>
-                    </div>
-                    <p>Entendo que ser desenvolver é dar soluções práticas para facilitar a vida de todos. Vejo que
-                        seria completamente inviável o sucesso nessa área sem a capacidade de ter empatia pelo outro,
-                        tanto com o grupo de trabalho como com o usuário.
-                        <br><br>
-                        Afinal, para quem e para que você desenvolve se não para o outro e pelo outro. Entender o
-                        próximo é algo que pratico com muita frequência, pois, atualmente trabalho com atendimento ao
-                        público e percebo que me enriqueço muito ao me colocar no lugar de cada um com quem converso
-                        para chegarmos a uma solução viável.
-                    </p>
-                </div>
-            </div>
+            </div>   
+                      
         </section>
 
     </main>
@@ -159,17 +160,9 @@
             display.classList.toggle('active');
         }
     </script>
-
-    <!-- <div class="grid">
-        <div style="background-color: aqua;"></div>
-        <div style="background-color: white;"></div>
-        <div style="background-color: black;"></div>
-        <div class="deslocamento" style="background-color: blue;"></div> <!--classe para alterar a posição-->
-    <div style="background-color: orange;"></div>
-    <div style="background-color: red;"></div>
-    <div class="purple" style="background-color: purple;"></div> <!--classe para determinar inicio e fim-->
-    </div> -->
-
+    <footer>
+        <span>© 2022 Gandara Web Developer - Todos os direitos reservados</span>
+    </footer>
 </body>
 
 </html>

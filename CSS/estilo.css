@@ -3,7 +3,6 @@
     margin: 0%;
     box-sizing: border-box;
     color: #FFC300;
-    /* font-family: 'fonte techno'; */
 }
 
 ul {
@@ -15,15 +14,9 @@ a {
 }
 
 body {
-    /* Para reduzier a quantidade de linhas, podemos mandar todos esses
-    comandos em uma só */
-    /* background-image: url(../arquivos/BackGroud.jpg);
-    background-repeat: no-repeat;
-    background-position: center center fixed; */
     height: 100vh;
     background: no-repeat center center fixed;
     background-size: cover;
-    /* background-image: linear-gradient(to right bottom, #032a04, #04360b, #07420f, #0d4e13, #135b17, #166c1a, #197d1c, #1c8f1e, #1aaa1e, #16c61c, #0ee217, #00ff0b); */
     background-image:url(../arquivos/BackGround-Tech-Black.jpg)
 }
 
@@ -31,10 +24,7 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px;
-    /* border-bottom: 2px solid white; borda simples "bottom" é biaxo, fundo, rodapé*/
-    /* box-shadow: 1px 1px 10px 1px black;  sequência > cor; offset horizontal; offset vertical; blur */
-    /* border-bottom: 15px ridge white; borda tipo 3d feia */
+    padding: 10px 50px;
     box-shadow: 1px 1px 10px 1px #ffff;
 }
 
@@ -62,16 +52,19 @@ header ul{
 
 .container {
     text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .container .name h1 {
     font-family: 'fonte techno';
-    font-size: 60px;
+    font-size: 60px;    
 }
 
 .container .name h5 {
     font-family: 'fonte zrnic';
     font-size: 25px;
+    margin-top: -26px;
 }
 
 #arrow{
@@ -85,10 +78,6 @@ header ul{
     max-height: 3000px;
 }
 
-/* #flex, img{
-    max-width: 250px;
-    max-height: 250px;
-} */
 @keyframes blink{
     to{
         visibility: hidden;
@@ -105,6 +94,8 @@ header ul{
 
 .form div p{
     font-family: 'fonte zrnic';
+    text-align: center;  
+     
 }
 #about p {  
     font-family: 'fonte zrnic';
@@ -117,10 +108,12 @@ header ul{
     display: block !important;
 }
 
-.form {
-    width: 40%;  
-    margin: 0 auto; 
-    margin-top: 20px; 
+.form {    
+    width: 40%;
+}
+
+#form{
+    justify-content: center;
 }
 
 .form input {
@@ -151,65 +144,9 @@ header ul{
 }
 .form form{
     margin: 10px;
-    padding: 5px;
-    /* border: thick double #fff; */
+    padding: 5px;    
+    justify-items:center;
 }
-
-.flex {
-    display: flex;
-    justify-content: center;        
-}
-
-.flex div {    
-    border: 5px solid #fff;    
-    margin: 15px;   
-    flex-basis: 100%;
-    background-color: #fff;
-    max-width: 260px;
-    cursor: pointer;
-}
-
-.flex div:hover{
-    box-shadow: 1px 1px 10px 1px #fff;
-}
-
-.flex div{
-    transition: 400ms;
-}
-/* .grid{
-    display: grid;
-    ROW = FILEIRA
-    grid-template-rows: 25px 50px 100px 200px; dividido por pixels
-    grid-template-rows: repeat(4, 50px); dividido por repetição
-    grid-template-rows: auto; dividido automaticamente 
-    grid-auto-rows: 1fr 2fr 6fr 1fr; dividido por frações        
-    grid-template-rows: repeat(3, 60px);
-    grid-template-columns: 90px 50px 30px 20px; também podemos usar as mesma opções nas colulas: px; repeat; auto e fr 
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    row-gap: 20px; podemos definir os tamanho do espaçamento das fileiras
-    column-gap: 20px; podemos definir os tamanho do espaçamento das colunas
-    margin: 10px;
-    border: 5px solid white;
-
-} */
-
-/* definir a posição por coordenadas */
-/* .deslocamento{
-    grid-column: 3;
-    grid-row: 2;
-}
-definir i inicio e fim
-.purple{
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-
-.grid div{
-    padding: 30px;
-} */
-
-/* Responsividade através de Media Quary */
 
 @media only screen and (max-width: 768px){
     .form{
@@ -232,39 +169,32 @@ definir i inicio e fim
     }
 }
 
-#Skills p {
-    color: #000;
-    text-align: justify;
-    font-family: 'fonte zrnic';
-    margin: 8px;
-    font-size: 18px;
-}
 
 #soft-skills{
     font-family: 'fonte zrnic';
-    font-size: 32px;
-    margin-top: 48px;       
+    font-size: 48px;
+    margin: 5px 0px 10px 0px; 
+    padding-bottom: 12px;         
 }
 
-#creativity p{
-    font-size: 40px;
-    text-align: center;  
+.flex-box {
+    display: flex;
+    justify-content: space-around;        
 }
 
-
-
-.card{
+.card{    
     position: relative;
     margin: 0 auto;
-    width: 700px;
-    height: 350px;
-    /* background: #ccc; */
+    width: 350px;
+    height: 700px;
     border-radius: 20px;
     display: flex;
     align-items: center;
     border-radius: 20px;
     transition: 0.5s;    
-}
+    pointer-events: none   
+    
+    }
 
 .card .circle{
     position: absolute;
@@ -273,7 +203,8 @@ definir i inicio e fim
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    overflow: hidden;  
+    overflow: hidden; 
+     
 }
 
 .card .circle::before{
@@ -283,9 +214,10 @@ definir i inicio e fim
     left: 0;
     width: 100%;
     height: 100%;
-    background: #911188; 
+    background: #fff; 
     clip-path: circle(120px at center); 
-    transition: 0.5s;  
+    transition: 0.5s; 
+    pointer-events: visible; 
 }
 
 .card:hover .circle:before{
@@ -300,13 +232,14 @@ definir i inicio e fim
     transform: translate(-50%,-50%);
     height: 250px;
     width:  250px;
-    pointer-events: none;
+    pointer-events: visible;
     border-radius: 20px;
     transition: 0.5s; 
 }
 
 .card:hover img{
-    left: 75%;
+    left: 60%;
+    top: 22%;
     height: 360px;
     width:  360px;
     border-radius: 20px;
@@ -314,8 +247,6 @@ definir i inicio e fim
 
 .card .content{
     position: relative;
-    left: 20%;
-    width: 50%;
     padding: 15px 15px 15px 15px;
     transition: 0.5s;
     opacity: 0;
@@ -328,19 +259,259 @@ definir i inicio e fim
     visibility: visible;
 }
 
-/* .card .content h2{     
-    color: #000;
-    font-size: 3em;
-    line-height: 1.2em;
-    font-family: 'fonte zrnic';
-} */
-
 .card .content p{
     color: #000;
     text-align: justify;    
-    font-family: 'Varela Round';
+    font-family: 'Nunito';
+    font-weight: 600;
+    margin-top: 360px;
 }
 
-.teste h2{
-    color: #911188;
+.card #creativity{
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.80); 
+    font-weight: 400;
+    font-family: 'fonte zrnic';
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.card:hover #creativity{
+    font-size: 60px;
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+    top: 52%;
+     
+}
+
+/* CARD DOIS */
+
+.card-dois{
+    position: relative;
+    margin: 0 auto;
+    width: 350px;
+    height: 700px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5s;    
+    pointer-events: none
+    
+}
+
+.card-dois .circle-dois{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;  
+}
+
+
+.card-dois .circle-dois::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff; 
+    clip-path: circle(120px at center); 
+    transition: 0.5s; 
+    pointer-events: visible; 
+}
+
+.card-dois:hover .circle-dois:before{
+    background: #fff;
+    clip-path: circle(400px at center);
+}
+
+.card-dois img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 250px;
+    width:  250px;
+    pointer-events: visible;
+    border-radius: 20px;
+    transition: 0.5s; 
+}
+
+.card-dois:hover img{
+    left: 60%;
+    top: 22%;
+    height: 360px;
+    width:  360px;
+    border-radius: 20px;
+}
+
+.card-dois .content-dois{
+    position: relative;
+    /* left: 20%;
+    width: 50%; */
+    padding: 15px 15px 15px 15px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card-dois:hover .content-dois{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card-dois .content-dois p{
+    color: #000;
+    text-align: justify;    
+    font-family: 'Nunito';
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 360px;
+}
+
+.card-dois #collaboration{
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.80); 
+    font-weight: 400;
+    font-family: 'fonte zrnic';
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.card-dois:hover #collaboration{
+    font-size: 60px;
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+    top: 52%;
+    /* left: 26%;  */
+}
+
+/* CARD TRÊS */
+.card-tres{
+    position: relative;
+    margin: 0 auto;
+    width: 350px;
+    height: 700px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5s;    
+    pointer-events: none
+}
+
+.card-tres .circle-tres{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;  
+}
+
+.card-tres .circle-tres::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff; 
+    clip-path: circle(120px at center); 
+    transition: 0.5s; 
+    pointer-events: visible; 
+} 
+
+
+.card-tres:hover .circle-tres:before{
+    background: #fff;
+    clip-path: circle(400px at center);
+}
+
+.card-tres img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 250px;
+    width:  250px;
+    pointer-events: visible;
+    border-radius: 20px;
+    transition: 0.5s;  
+}
+
+.card-tres:hover img{
+    left: 60%;
+    top: 22%;
+    height: 360px;
+    width:  360px;
+    border-radius: 20px;
+}
+
+.card-tres .content-tres{
+    position: relative;
+    /* left: 20%; */
+    /* width: 100%; */
+    padding: 15px 15px 15px 15px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card-tres:hover .content-tres{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card-tres .content-tres p{
+    color: #000;
+    text-align: justify;    
+    font-family: 'Nunito';
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 390px;
+}
+
+.card-tres #empathy{
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.80); 
+    font-weight: 400;
+    font-family: 'fonte zrnic';
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.card-tres:hover #empathy{
+    font-size: 60px;
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+    top: 52%; 
+}
+
+footer{    
+    font-family: 'fonte zrnic';
+    text-align: center;
+    padding-bottom: 10px;
 }
